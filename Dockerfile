@@ -5,7 +5,7 @@ FROM public.ecr.aws/lambda/python:3.10
 COPY requirements.txt ./
 RUN pip3 install -r requirements.txt
 
-COPY my_script.py ./
+COPY main.py ./
 
 # run the code, entering in the "main" function
 CMD ["main.lambda_handler"]
